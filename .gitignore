@@ -104,3 +104,4 @@ dist
 .tern-port
 
 #Ponemos las carpetas o archivos que queremos que seannignorados
+#hacemos otro update a gitignore
