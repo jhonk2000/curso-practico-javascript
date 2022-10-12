@@ -58,26 +58,22 @@ altura = Math.sqrt(altura2);
 return altura;
 }
 
-function alturaTrianguloIsoce(){
-    const lado1 = document.getElementById("InputLado1").value;
-    const lado2 = document.getElementById("InputLado2").value;
-    const lado3 = document.getElementById("InputLado3").value;
-    console.log(lado1,lado2,lado3);
+function alturaTrianguloIsoce(lado1,lado2,lado3){
     if (lado1 === lado2) {
         const lado = lado1;
         const base = lado3;
         altura = isoceles(lado,base);
-        alert(altura);
+       alert("la altura del triangulo es"+ altura);
     }else if(lado1 === lado3){
         const lado = lado1;
         const base = lado2;
         altura = isoceles(lado,base);
-        alert(altura);
+       alert("la altura del triangulo es"+ altura);
     }else if(lado2 === lado3){
         const lado = lado2;
         const base = lado1;
         altura =isoceles(base,lado);
-      alert(altura);
+       alert("la altura del triangulo es"+ altura);
     }else{
         alert("No es un triangulo isoceles");
     }
@@ -99,4 +95,3 @@ function calcularAreaoCuadrado(){
     const area = areaCuadrado(value);
     alert(area);
 }
-
