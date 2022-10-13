@@ -18,19 +18,32 @@ const coupons = [
    const InputCoupon = document.getElementById("InputCoupon");
    const couponValue = InputCoupon.value;
 
-   let descuento;
 
-  switch(couponValue) {
-    case coupons[0]: // "JuanDC_es_Batman"
-      descuento = 15;
-    break;
-    case coupons[1]: // "pero_no_le_digas_a_nadie"
-      descuento = 30;
-    break;
-    case coupons[2]: // "es_un_secreto"
-      descuento = 25;
-    break;
-  }
+  // /opcion 1
+//    let descuento;
+
+//   switch(couponValue) {
+//     case coupons[0]: // "JuanDC_es_Batman"
+//       descuento = 15;
+//     break;
+//     case coupons[1]: // "pero_no_le_digas_a_nadie"
+//       descuento = 30;
+//     break;
+//     case coupons[2]: // "es_un_secreto"
+//       descuento = 25;
+//     break;
+//opcion 2
+if (!coupons.includes(couponValue)) {
+   alert("El cupón " + couponValue + "no es válido");
+} else if (couponValue === "JuanDC_es_Batman") {
+   descuento = 15;
+} else if (couponValue === "pero_no_le_digas_a_nadie") {
+   descuento = 30;
+} else if (couponValue === "es_un_secreto") {
+   descuento = 25;
+}
+  
+//opcion 
 
   const precioConDescuento =  calcularPrecioConDescuento(precioValue,descuento);
    const resultP = document.getElementById("ResultP");
